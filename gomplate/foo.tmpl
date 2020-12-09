@@ -1,7 +1,13 @@
 ---
 title: {{ .title }}
-
+{{ if index . "weight"}}weight: {{ .weight }} {{ end }}
 ---
+
+{{ if index . "comment"}}
+# Proposed content
+
+{{ .content }} 
+{{ end }}
 
 ## This is placeholder text for {{.title}}
 
